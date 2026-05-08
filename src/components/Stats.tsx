@@ -18,7 +18,7 @@ export default function Stats() {
             y: [0, -100, 150, 0],
           }}
           transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-0 -left-[10%] w-[50%] h-[50%] bg-red-600/10 rounded-full blur-[140px] opacity-60" 
+          className="absolute top-0 -left-[10%] w-[50%] h-[50%] bg-red-600/10 rounded-full blur-[80px] md:blur-[140px] opacity-60 will-change-transform" 
         />
         <motion.div 
           animate={{ 
@@ -26,7 +26,7 @@ export default function Stats() {
             y: [0, 150, -100, 0],
           }}
           transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-0 -right-[10%] w-[40%] h-[40%] bg-rose-600/5 rounded-full blur-[120px] opacity-40" 
+          className="absolute bottom-0 -right-[10%] w-[40%] h-[40%] bg-rose-600/5 rounded-full blur-[60px] md:blur-[120px] opacity-40 will-change-transform" 
         />
         <motion.div 
           animate={{ 
@@ -34,7 +34,7 @@ export default function Stats() {
             opacity: [0.1, 0.2, 0.1]
           }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30%] h-[30%] bg-emerald-500/5 rounded-full blur-[120px]" 
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30%] h-[30%] bg-emerald-500/5 rounded-full blur-[80px] md:blur-[120px] will-change-transform" 
         />
       </div>
 
@@ -50,7 +50,7 @@ export default function Stats() {
               className="relative group"
             >
               {/* Glass Card */}
-              <div className="h-full p-10 bg-white/[0.03] backdrop-blur-3xl backdrop-saturate-150 border border-white/10 rounded-[2rem] flex flex-col justify-between min-h-[300px] transition-all duration-700 hover:bg-white/[0.06] hover:border-white/20 hover:shadow-[0_0_40px_rgba(220,38,38,0.1)] group-hover:-translate-y-2">
+              <div className="h-full p-10 bg-white/[0.03] backdrop-blur-lg md:backdrop-blur-3xl backdrop-saturate-150 border border-white/10 rounded-[2rem] flex flex-col justify-between min-h-[300px] transition-all duration-700 hover:bg-white/[0.06] hover:border-white/20 hover:shadow-[0_0_40px_rgba(220,38,38,0.1)] group-hover:-translate-y-2">
                 
                 {/* Decorative Elements */}
                 <div className="flex justify-between items-start">
@@ -102,11 +102,11 @@ export default function Stats() {
         </div>
       </div>
       
-      {/* Scanner Beam Effect */}
+      {/* Scanner Beam Effect - Only on Desktop */}
       <motion.div 
         animate={{ y: ['-100%', '200%'] }}
         transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-        className="absolute inset-x-0 h-32 bg-gradient-to-b from-transparent via-red-500/5 to-transparent pointer-events-none z-0" 
+        className="absolute inset-x-0 h-32 bg-gradient-to-b from-transparent via-red-500/5 to-transparent pointer-events-none z-0 hidden md:block will-change-transform" 
       />
     </section>
   );

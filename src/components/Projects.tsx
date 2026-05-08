@@ -36,7 +36,7 @@ export default function Projects() {
               transition={{ delay: i * 0.1, duration: 0.8 }}
               className="group relative"
             >
-              <div className={`h-full p-10 bg-white/[0.02] backdrop-blur-3xl border border-white/5 rounded-[2.5rem] flex flex-col justify-between min-h-[400px] hover:bg-white/[0.05] hover:border-white/10 transition-all duration-700 group-hover:-translate-y-2`}>
+              <div className={`h-full p-10 bg-white/[0.02] backdrop-blur-lg md:backdrop-blur-3xl border border-white/5 rounded-[2.5rem] flex flex-col justify-between min-h-[400px] hover:bg-white/[0.05] hover:border-white/10 transition-all duration-700 group-hover:-translate-y-2`}>
                 
                 {/* Glow behind icon */}
                 <div className={`absolute top-10 right-10 w-20 h-20 bg-gradient-to-br ${step.color} blur-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
