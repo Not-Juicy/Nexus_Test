@@ -193,18 +193,13 @@ Direct conversion funnel.
 
  🔧 8. Maintenance & Troubleshooting
 
-🆘 Technical Support & Fixes
-| Challenge | Solution Path |
-| :-------- | :------------ |
-| Styling inconsistencies | Verify that the Tailwind 4 engine is correctly imported at the top level of index.css and that npm run dev is actively watching for changes. |
-| Animation performance | Reduce the blur radius in Framer Motion components (automatically optimized for mobile) or check for layout-shifting props. |
-| Deployment route errors | Ensure vercel.json is present in the root with the "rewrites" rule to handle single-page application routing correctly. |
-
-🔄 Site Content Updates
-- Global Brand Name | Update strings in Navbar.tsx, Footer.tsx, and the metadata section of index.html.
-- Client Feedback | Modify the testimonial array within Testimonials.tsx to add, remove, or edit client quotes.
-- Service Offerings | Navigate to ServicesPage.tsx and update the data objects to reflect changes in consulting tiers.
-- Project Portfolio | Update the projects list in Projects.tsx to showcase the latest high-performance agency work.
+- Styling issues | Verify Tailwind 4 import in index.css and ensure npm run dev is active.
+- Animation lag | Reduce blur radius in Framer Motion or check for layout-shifting props.
+- Deployment errors | Ensure vercel.json is in the root with SPA "rewrites" configured.
+- Brand identity | Update name strings in Navbar.tsx, Footer.tsx, and index.html.
+- Client feedback | Modify the data array within src/data/testimonials.ts.
+- Service offerings | Navigate to src/data/services.ts to update descriptions or icons.
+- Project portfolio | Update the src/data/process.ts to reflect current methodologies.
 
 ---
 
