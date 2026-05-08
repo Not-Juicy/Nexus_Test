@@ -3,12 +3,14 @@ import Services from '../components/Services';
 import Projects from '../components/Projects';
 import Stats from '../components/Stats';
 import Testimonials from '../components/Testimonials';
+import SEO from '../components/SEO';
 import { motion } from 'motion/react';
 import { Phone, Mail, Send, Facebook, Linkedin } from 'lucide-react';
 
 export default function Home() {
   return (
     <>
+      <SEO />
       <Hero />
       
       {/* High-Performance Marquee */}

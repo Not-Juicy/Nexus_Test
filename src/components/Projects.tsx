@@ -1,40 +1,7 @@
 import { motion } from 'motion/react';
 import { Target, Zap, Shield, TrendingUp, ChevronRight } from 'lucide-react';
 
-const steps = [
-  {
-    phase: '01',
-    title: 'Discovery',
-    subtitle: 'Strategic Auditing',
-    desc: 'We audit your current digital presence, understand your goals, and identify the highest-impact opportunities for growth.',
-    icon: Target,
-    color: 'from-red-600/20 to-transparent'
-  },
-  {
-    phase: '02',
-    title: 'Strategy',
-    subtitle: 'High-Level Roadmap',
-    desc: 'A detailed roadmap with timelines, KPIs, and clear milestones. Every recommendation is backed by data and industry insights.',
-    icon: Shield,
-    color: 'from-blue-600/20 to-transparent'
-  },
-  {
-    phase: '03',
-    title: 'Execution',
-    subtitle: 'Omnichannel Deployment',
-    desc: 'Our team implements across all channels — from ad campaigns to product launches — with weekly reporting and optimization.',
-    icon: Zap,
-    color: 'from-purple-600/20 to-transparent'
-  },
-  {
-    phase: '04',
-    title: 'Scale',
-    subtitle: 'Continuous Growth',
-    desc: 'Once we find what works, we double down. Continuous testing, scaling, and refining to maximize your return on investment.',
-    icon: TrendingUp,
-    color: 'from-orange-600/20 to-transparent'
-  }
-];
+import { processSteps } from '../data/process';
 
 export default function Projects() {
   return (
@@ -60,7 +27,7 @@ export default function Projects() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {steps.map((step, i) => (
+          {processSteps.map((step, i) => (
             <motion.div
               key={step.title}
               initial={{ opacity: 0, y: 30 }}

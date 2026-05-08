@@ -1,26 +1,8 @@
 import { motion } from 'motion/react';
 import { ShieldCheck, Zap, ArrowRight, Lightbulb, TrendingUp, Phone, Mail, Send } from 'lucide-react';
 
-const serviceList = [
-  {
-    title: 'Digital Marketing',
-    desc: 'Performance-driven campaigns across Google, Meta, and TikTok. We optimize every dollar for maximum return with data-backed strategies.',
-    icon: TrendingUp,
-    category: 'Marketing'
-  },
-  {
-    title: 'SaaS Strategy',
-    desc: 'Product strategy, roadmap planning, and go-to-market execution for SaaS businesses. From PRDs to launch and beyond.',
-    icon: Lightbulb,
-    category: 'SaaS'
-  },
-  {
-    title: 'AI & Automation',
-    desc: 'Integrate AI tools and workflows into your business operations. Automate repetitive tasks and unlock new capabilities with intelligent systems.',
-    icon: Zap,
-    category: 'Automation'
-  }
-];
+import { services } from '../data/services';
+import SEO from '../components/SEO';
 
 function UsersIcon(props: any) {
   return (
@@ -47,6 +29,10 @@ function UsersIcon(props: any) {
 export default function ServicesPage() {
   return (
     <div className="pt-32 bg-black">
+      <SEO 
+        title="Our Services" 
+        description="Explore our high-performance digital marketing, SaaS strategy, and AI automation services designed for rapid business growth." 
+      />
       {/* Hero Section */}
       <section className="py-24 px-6 max-w-7xl mx-auto border-b border-white/10">
         <motion.div
@@ -67,7 +53,7 @@ export default function ServicesPage() {
       {/* Services Grid */}
       <section className="py-32 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
-          {serviceList.map((service, i) => (
+          {services.map((service, i) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 20 }}
